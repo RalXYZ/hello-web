@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-UK">
     <head>
         <meta charset="utf-8">
+        <meta name="author" content="Ralph">
+        <meta name="description" content="A personal website">
+        <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon">   <!--icon on the tab-->
         <title>My test page</title>
-        <link href="styles/style.css" rel="stylesheet">
-        <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <!-- <link href="styles/style.css" rel="stylesheet">  -->                         <!--CSS-->
+        <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css"> <!--font-->
     </head>
     <body>
-        <h1>Cat</h1>
+        <header>
+            <h1>RalXYZ's Homepage</h1>
+        </header>
+
+        <!-- <h1>Cat</h1> -->
+
+        <nav>
+            <ul>
+                <li>Brief</li>
+                <li>Poem</li>
+                <li>About</li>
+            </ul>
+            <form>  <!-- search bar -->
+                <input type="search" name="q" placeholder="type something here">
+                <input type="submit" value="search">
+            </form>
+        </nav>
+
+        <aside>
+            <h2>Featured</h2>
+            <ul>
+                <li><a href="#Stars">Stars</a></li>
+                <li><a href="#Javert's-Suicide"><span lang="fr">Javert's</span> Suicide</a></li>
+            </ul>
+        </aside>
+
+        <article>
+            <h3 id="Stars">Stars</h3>
+            <p>
+                Stars<br>
+                In your multitudes,<br>
+                Scarce to be counted<br>
+                Filling the darkness.<br>
+                With order and light<br>
+                You are the sentinels,<br>
+                Silent and sure<br>
+                Keeping watch in the night.<br>
+                Keeping watch in the night.<br>
+            </p>
+        </article>
+
+        <article>
+            <h3 id="Javert's-Suicide"><span lang="fr">Javert's</span> Suicide</h3>
+            <p>
+                And must I now begin to doubt,<br>
+                Who never doubted all these years?<br>
+                My heart is stone and still it trembles<br>
+                The world I have known is lost in shadow.<br>
+                Is he from heaven or from hell?<br>
+                And does he know<br>
+                That granting me my life today<br>
+                This man has killed me even so?<br>
+            </p>
+        </article>
+
+        <!-- <span style="font-size: 32px; margin: 21px 0;">Adjust font size</span> -->
         <p>Cat is very <strong>cute</strong></p>
         <ol>
             <li>ear</li>
             <li>tail</li>
             <li>meow</li>
         </ol>
-        <img src="images/RalXYZ.jpg" alt="firefox">
-        <p>More infomation about <a href="https://en.wikipedia.org/wiki/Cat">Cat</a>.</p>
-        <button>change username</button>
 
-        <script src="scripts/main.js" defer></script>
+        <!--
+        <img src="images/RalXYZ.jpg" alt="a cat">
+        <button>change username</button>
+        -->
+
+        <footer>
+            <p>Created by RalXYZ with the help of <a href="https://developer.mozilla.org/">MDN</a></p>
+        </footer>
+
+        <!-- <script src="scripts/main.js" defer></script> -->           <!--JS-->
     </body>
-</html> 
+</html>
