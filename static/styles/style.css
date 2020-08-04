@@ -1,0 +1,56 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#site-body {
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+nav {
+    column-count: 2;
+}
+
+nav > ul, nav > form {
+    float: left;
+    clear: both;
+    margin: 10px;
+}
+
+nav li {
+    display: inline;
+}
+
+div.articles {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+header {
+    background-image: linear-gradient(90deg, hsla(260,100%,50%,1) 1%, hsla(320,100%,50%,1) 100%);
+    color: white;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+article {
+    max-width: 300px;
+    margin: 0px 30px;
+}
+
+aside {
+    border: dotted 2px;
+    width: 180px;
+    height: 200px;
+    margin: 20px;
+    line-height: 30px;
+    float: right;
+}
+
+aside  ul, aside  h2 {
+    margin: 10px;
+    padding: 10px;
+}
