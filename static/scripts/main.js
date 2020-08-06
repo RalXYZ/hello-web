@@ -1,42 +1,25 @@
-let myImage = document.querySelector('img');
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
-    if (mySrc === 'images/RalXYZ.jpg') {
-        myImage.setAttribute('src', 'images/RalXYZ-red.jpg');
-    } 
-    else if (mySrc === 'images/RalXYZ-red.jpg') {
-        myImage.setAttribute('src', 'images/RalXYZ.jpg');
+const button = document.querySelector('button')
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
+
+function random(number) {
+      return Math.floor(Math.random() * number)
+}
+function randomColor() {
+    if (Math.floor(Math.random() * 2))
+        return 'hsla(320, 100%, 50%, 0.5)'
+    else
+        return 'hsla(260, 100%, 50%, 0.5)'
+
+}
+function draw() {
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight)
+    for(let i = 0; i < 25; i++) {
+        ctx.beginPath()
+        ctx.fillStyle = randomColor()
+        ctx.arc(random(canvas.clientWidth), random(canvas.clientHeight), random(50), 0, 2 * Math.PI)
+        ctx.fill()
     }
 }
 
-
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
-
-function setUserName() {
-    let myName = prompt('Please enter your name');
-    localStorage.setItem('name', myName);
-    if (!myName || myName === null) {
-        myHeading.textContent = 'Cat';
-    }
-    else {
-        myHeading.textContent = myName + ' Cat';
-    }
-}
-
-if (!localStorage.getItem('name')) {
-    setUserName();
-}
-else {
-    let storedName = localStorage.getItem('name');
-    if (!storedName || storedName === null  || storedName === 'null') {
-        myHeading.textContent = 'Cat';
-    }
-    else {
-        myHeading.textContent = storedName + ' Cat';
-    }
-}
-
-myButton.onclick = function() {
-    setUserName();
-}
+button.onclick = draw

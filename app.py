@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 
 @app.route("/", methods=["get"])
-@app.route("/hello", methods=["get"])
 def hello():
     return render_template('index.html')
 
