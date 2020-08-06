@@ -1,6 +1,10 @@
-const button = document.querySelector('button')
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
+
+canvas.width = 800
+canvas.height = 100
+
+draw()
 
 function random(number) {
       return Math.floor(Math.random() * number)
@@ -17,9 +21,9 @@ function draw() {
     for(let i = 0; i < 25; i++) {
         ctx.beginPath()
         ctx.fillStyle = randomColor()
-        ctx.arc(random(canvas.clientWidth), random(canvas.clientHeight), random(50), 0, 2 * Math.PI)
+        ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI)
         ctx.fill()
     }
 }
 
-button.onclick = draw
+canvas.onclick = draw
