@@ -8,14 +8,29 @@ body {
     font-size: 13px;
 }
 
+::selection {
+    background: hsla(270, 100%, 50%, 1);
+    color: #FFFFFF;
+}
+::-moz-selection {
+    background: hsla(270, 100%, 50%, 1);
+    color: #FFFFFF;
+}
+
 nav {
     column-count: 2;
 }
 
-nav > ul, nav > form {
+nav > ul {
     float: left;
     clear: both;
     margin: 10px;
+}
+nav > form {
+    float: right;
+    clear: both;
+    margin: 10px;
+    padding-right: 40px;
 }
 
 nav li {
@@ -47,12 +62,19 @@ header {
 
 article {
     max-width: 300px;
-    margin: 0px 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+div.articles article, header, footer p.clickInformation {
+    /* border-radius: 10px 10px 10px 10px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 aside {
     border: dotted 2px;
-    width: 180px;
+    width: 140px;
     height: 200px;
     margin: 20px;
     line-height: 30px;
@@ -65,9 +87,19 @@ aside  ul, aside  h2 {
 }
 
 canvas {
+    margin-top: 10px;
     display: block;
     width: 800px;
     height: 100px;
+}
 
+footer div p.clickInformation {
+    position: absolute;
+    background-image: linear-gradient(90deg, hsla(200, 100%, 50%, 1) 1%, hsla(230, 100%, 50%, 1) 100%);
+    padding: 5px;
+    color: white;
+}
 
+footer div.information {
+    position: static;
 }
