@@ -5,8 +5,6 @@ const clickInformation = document.querySelector('footer div p.clickInformation')
 canvas.width = 800
 canvas.height = 100
 
-draw()
-
 function random(number) {
       return Math.floor(Math.random() * number)
 }
@@ -15,7 +13,6 @@ function randomColor() {
         return 'hsla(320, 100%, 50%, 0.5)'
     else
         return 'hsla(260, 100%, 50%, 0.5)'
-
 }
 function draw() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight)
@@ -34,6 +31,8 @@ function hideAndSetHidden() {
     }
 }
 
+draw()
+
 canvas.onclick = function () {
     hideAndSetHidden();
     draw();
@@ -46,6 +45,5 @@ clickInformation.onclick = function () {
 if(localStorage.getItem("visited")) {
     clickInformation.style.display = 'none';
 }
-
 
 let canvasProperty = canvas.getBoundingClientRect();

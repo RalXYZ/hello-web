@@ -93,13 +93,15 @@ canvas {
     height: 100px;
 }
 
+footer div.information {
+    position: relative;
+}
 footer div p.clickInformation {
     position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
     background-image: linear-gradient(90deg, hsla(200, 100%, 50%, 1) 1%, hsla(230, 100%, 50%, 1) 100%);
     padding: 5px;
     color: white;
-}
-
-footer div.information {
-    position: static;
 }
