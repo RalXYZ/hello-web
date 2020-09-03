@@ -1,0 +1,107 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#site-body {
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+::selection {
+    background: hsla(200, 100%, 50%, 1);
+    color: #FFFFFF;
+}
+::-moz-selection {
+    background: hsla(200, 100%, 50%, 1);
+    color: #FFFFFF;
+}
+
+nav {
+    column-count: 2;
+}
+
+nav > ul {
+    float: left;
+    clear: both;
+    margin: 10px;
+}
+nav > form {
+    float: right;
+    clear: both;
+    margin: 10px;
+    padding-right: 40px;
+}
+
+nav li {
+    display: inline;
+}
+
+div.articles {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(90deg, hsla(210, 100%, 50%, 1) 1%, hsla(220, 100%, 50%, 1) 100%);
+    color: white;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    /*
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    */
+}
+
+article {
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+div.articles article, header, footer p.clickInformation {
+    /* border-radius: 10px 10px 10px 10px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+aside {
+    border: dotted 2px;
+    width: 140px;
+    height: 200px;
+    margin: 20px;
+    line-height: 30px;
+    float: right;
+}
+
+aside  ul, aside  h2 {
+    margin: 10px;
+    padding: 10px;
+}
+
+canvas {
+    margin-top: 10px;
+    display: block;
+    width: 800px;
+    height: 100px;
+}
+
+footer div.information {
+    position: relative;
+}
+footer div p.clickInformation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    background-image: linear-gradient(90deg, hsla(200, 100%, 50%, 1) 1%, hsla(230, 100%, 50%, 1) 100%);
+    padding: 5px;
+    color: white;
+}
