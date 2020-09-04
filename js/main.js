@@ -5,8 +5,21 @@ const clickInformation = document.querySelector('footer div p.clickInformation')
 canvas.width = 800
 canvas.height = 100
 
-let anchorLink = document.querySelector("a[href='#Stars']"),
-scrollTarget = document.getElementById("Stars");
+document.querySelectorAll("a[href^='#']").forEach((element) => {
+    element.addEventListener("click", (e) => {
+        if (window.scrollTo) {
+            return ((elementEnc) => {
+                e.preventDefault();
+                let scrollTarget = document.getElementById(elementEnc.hash.substr(1))  // remove first character '#'
+                let titleBarHeight = document.querySelector('header h1').scrollHeight;
+                window.scrollTo({top: scrollTarget.offsetTop - titleBarHeight});
+            })(element)
+        }
+    })
+})
+/*
+let anchorLink = document.querySelector("a[href^='#']");
+let scrollTarget = document.getElementById("Stars");
 anchorLink.addEventListener("click", (e) => {
     if (window.scrollTo) {
         let titleBarHeight = document.querySelector('header h1').scrollHeight;
@@ -14,6 +27,7 @@ anchorLink.addEventListener("click", (e) => {
         window.scrollTo({top: scrollTarget.offsetTop - titleBarHeight});
     }
 })
+*/
 
 function random(number) {
       return Math.floor(Math.random() * number)
