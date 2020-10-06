@@ -1,9 +1,21 @@
-const canvas = document.querySelector('canvas')
-const ctx = canvas.getContext('2d')
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 const clickInformation = document.querySelector('footer div p.clickInformation');
 
-canvas.width = 800
-canvas.height = 100
+canvas.width = 800;
+canvas.height = 100;
+
+document.querySelectorAll("a[href^='#']").forEach((element) => {
+    element.addEventListener("click", (e) => {
+        if (window.scrollTo) {
+            ele = element;
+            e.preventDefault();
+            let scrollTarget = document.getElementById(ele.hash.substr(1));  // remove first character '#'
+            let titleBarHeight = document.querySelector('header h1').scrollHeight;
+            window.scrollTo({top: scrollTarget.offsetTop - titleBarHeight});
+        }
+    })
+})
 
 function random(number) {
       return Math.floor(Math.random() * number)
@@ -31,7 +43,7 @@ function hideAndSetHidden() {
     }
 }
 
-draw()
+draw();
 
 canvas.onclick = function () {
     hideAndSetHidden();

@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     max-width: 800px;
     margin: 0 auto;
@@ -13,11 +9,11 @@ body {
 }
 
 ::selection {
-    background: hsla(270, 100%, 50%, 1);
+    background: hsla(200, 100%, 50%, 1);
     color: #FFFFFF;
 }
 ::-moz-selection {
-    background: hsla(270, 100%, 50%, 1);
+    background: hsla(200, 100%, 50%, 1);
     color: #FFFFFF;
 }
 
@@ -50,7 +46,7 @@ div.articles {
 header {
     position: sticky;
     top: 0;
-    background-image: linear-gradient(90deg, hsla(260, 100%, 50%, 1) 1%, hsla(320, 100%, 50%, 1) 100%);
+    background-image: linear-gradient(90deg, hsla(210, 100%, 50%, 1) 1%, hsla(220, 100%, 50%, 1) 100%);
     color: white;
     height: 80px;
     text-align: center;

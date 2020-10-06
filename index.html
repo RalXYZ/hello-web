@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="author" content="Ralph">
         <meta name="description" content="A personal website">
-        <link href="img/favicon.jpg" rel="shortcut icon" type="image/x-icon">   <!--icon on the tab-->
+        <link href="/img/favicon.jpg" rel="shortcut icon" type="image/x-icon">   <!--icon on the tab-->
         <title>My test page</title>
-        <link href="css/style.css" rel="stylesheet">                         <!--CSS-->
+        <link href="/css/style.css" rel="stylesheet">                         <!--CSS-->
         <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css"> <!--font-->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
@@ -35,12 +35,14 @@
                 <ul>
                     <li><a href="#Stars">Stars</a></li>
                     <li><a href="#Javert's-Suicide"><span lang="fr">Javert's</span> Suicide</a></li>
+                    <li><a href="#Castle">Castle</a></li>
+                    <li><a href="/test/">Test url</a></li>
                 </ul>
             </aside>
 
             <div class="articles">
-                <article>
-                    <h3 id="Stars">Stars</h3>
+                <article id="Stars">
+                    <h3>Stars</h3>
                     <p>
                         Stars<br>
                         In your multitudes,<br>
@@ -53,8 +55,8 @@
                         Keeping watch in the night.<br>
                     </p>
                 </article>
-                <article>
-                    <h3 id="Javert's-Suicide"><span lang="fr">Javert's</span> Suicide</h3>
+                <article id="Javert's-Suicide">
+                    <h3><span lang="fr">Javert's</span> Suicide</h3>
                     <p>
                         And must I now begin to doubt,<br>
                         Who never doubted all these years?<br>
@@ -66,8 +68,8 @@
                         This man has killed me even so?<br>
                     </p>
                 </article>
-                <article>
-                    <h3 id="Castle">Castle on the Cloud</h3>
+                <article id="Castle">
+                    <h3>Castle on the Cloud</h3>
                     <p>
                         There is a castle on a cloud<br>
                         I like to go there in my sleep<br>
@@ -102,7 +104,7 @@
             <p>Created by RalXYZ with the help of <a href="https://developer.mozilla.org/">MDN</a></p>
         </footer>
 
-        <script src="js/main.js" defer></script>
         <script src="js/vue.js" defer></script>
+        <script src="js/main.js" defer></script>
     </body>
 </html>
